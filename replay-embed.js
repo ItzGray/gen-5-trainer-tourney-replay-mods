@@ -17,7 +17,78 @@
 
 
 
-
+var uniqueMusicIds={
+53:6,
+54:6,
+55:6,
+56:6,
+57:6,
+58:6,
+59:6,
+60:6,
+61:6,
+90:6,
+91:6,
+92:6,
+287:6,
+288:6,
+289:6,
+403:6,
+404:6,
+405:6,
+491:6,
+492:6,
+493:6,
+494:6,
+495:6,
+496:6,
+498:6,
+499:6,
+500:6,
+507:6,
+508:6,
+509:6,
+539:6,
+540:6,
+541:6,
+588:6,
+589:6,
+590:6,
+591:6,
+592:6,
+593:6,
+594:6,
+595:6,
+596:6,
+64:16,
+65:16,
+89:16,
+218:16,
+586:17,
+587:17,
+11:18,
+12:18,
+13:18,
+21:18,
+22:18,
+23:18,
+24:18,
+25:18,
+131:18,
+132:18,
+133:18,
+228:19,
+229:19,
+230:19,
+231:19,
+563:19,
+564:19,
+565:19,
+566:19,
+232:20,
+407:21,
+567:22
+};
 
 window.exports=window;
 
@@ -97,7 +168,123 @@ if(rc2)rc2.innerHTML=rc2.innerHTML;
 if(window.HTMLAudioElement)$('.soundchooser, .startsoundchooser').show();
 this.update();
 this.battle.subscribe(function(state){return _this.update(state);});
+var p1_name=this.battle.p1.name;
+var p2_name=this.battle.p2.name;
+var p1_id=parseInt(p1_name.split("(",2)[1].split(")",2)[0]);
+var p2_id=parseInt(p2_name.split("(",2)[1].split(")",2)[0]);
+if(p1_id in uniqueMusicIds&&p2_id in uniqueMusicIds){
+var random_player=Math.floor(Math.random()*(2-1+1))+1;
+if(random_player===1){
+if(uniqueMusicIds[p1_id]===6){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-rival.mp3',19180,57373);
+}else
+if(uniqueMusicIds[p1_id]===16){
 this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-n1.mp3',19170,73876);
+}else
+if(uniqueMusicIds[p1_id]===17){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-n2.mp3',83093,170345);
+}else
+if(uniqueMusicIds[p1_id]===18){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-leader.mp3',18298,91929);
+}else
+if(uniqueMusicIds[p1_id]===19){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-e4.mp3',89910,163173);
+}else
+if(uniqueMusicIds[p1_id]===20){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-ghetsis.mp3',15420,139182);
+}else
+if(uniqueMusicIds[p1_id]===21){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-alder.mp3',29240,78865);
+}else
+if(uniqueMusicIds[p1_id]===22){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-cynthia.mp3',84116,159090);
+}
+}else
+{
+if(uniqueMusicIds[p2_id]===6){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-rival.mp3',19180,57373);
+}else
+if(uniqueMusicIds[p2_id]===16){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-n1.mp3',19170,73876);
+}else
+if(uniqueMusicIds[p2_id]===17){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-n2.mp3',83093,170345);
+}else
+if(uniqueMusicIds[p2_id]===18){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-leader.mp3',18298,91929);
+}else
+if(uniqueMusicIds[p2_id]===19){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-e4.mp3',89910,163173);
+}else
+if(uniqueMusicIds[p2_id]===20){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-ghetsis.mp3',15420,139182);
+}else
+if(uniqueMusicIds[p2_id]===21){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-alder.mp3',29240,78865);
+}else
+if(uniqueMusicIds[p2_id]===22){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-cynthia.mp3',84116,159090);
+}
+}
+}else
+if(p1_id in uniqueMusicIds){
+if(uniqueMusicIds[p1_id]===6){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-rival.mp3',19180,57373);
+}else
+if(uniqueMusicIds[p1_id]===16){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-n1.mp3',19170,73876);
+}else
+if(uniqueMusicIds[p1_id]===17){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-n2.mp3',83093,170345);
+}else
+if(uniqueMusicIds[p1_id]===18){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-leader.mp3',18298,91929);
+}else
+if(uniqueMusicIds[p1_id]===19){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-e4.mp3',89910,163173);
+}else
+if(uniqueMusicIds[p1_id]===20){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-ghetsis.mp3',15420,139182);
+}else
+if(uniqueMusicIds[p1_id]===21){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-alder.mp3',29240,78865);
+}else
+if(uniqueMusicIds[p1_id]===22){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-cynthia.mp3',84116,159090);
+}
+}else
+if(p2_id in uniqueMusicIds){
+if(uniqueMusicIds[p2_id]===6){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-rival.mp3',19180,57373);
+}else
+if(uniqueMusicIds[p2_id]===16){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-n1.mp3',19170,73876);
+}else
+if(uniqueMusicIds[p2_id]===17){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-n2.mp3',83093,170345);
+}else
+if(uniqueMusicIds[p2_id]===18){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-leader.mp3',18298,91929);
+}else
+if(uniqueMusicIds[p2_id]===19){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-e4.mp3',89910,163173);
+}else
+if(uniqueMusicIds[p2_id]===20){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-ghetsis.mp3',15420,139182);
+}else
+if(uniqueMusicIds[p2_id]===21){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-alder.mp3',29240,78865);
+}else
+if(uniqueMusicIds[p2_id]===22){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-cynthia.mp3',84116,159090);
+}
+}else
+if(p1_name.includes("Team Plasma Grunt")||p2_name.includes("Team Plasma Grunt")){
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-plasma.mp3',14189,97297);
+}else
+{
+this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-trainer.mp3',14629,110109);
+}
 BattleSound.bgm.push(this.battle.scene.bgm);
 },
 $:function(sel){
