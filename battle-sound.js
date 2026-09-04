@@ -117,7 +117,7 @@ if(this.soundCache[url])return this.soundCache[url];
 try{
 var sound=document.createElement('audio');
 sound.src="https://"+Config.routes.client+"/"+url;
-if(url.includes("raw.githubusercontent.com")sound.src=url;
+if(url.includes("raw.githubusercontent.com"))sound.src=url;
 sound.volume=this.effectVolume/100;
 this.soundCache[url]=sound;
 return sound;
