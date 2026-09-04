@@ -98,6 +98,7 @@ if(window.HTMLAudioElement)$('.soundchooser, .startsoundchooser').show();
 this.update();
 this.battle.subscribe(function(state){return _this.update(state);});
 this.battle.scene.bgm=new BattleBGM('https://raw.githubusercontent.com/ItzGray/snakewood-showdown-audio/main/bw-n1.mp3',19170,73876);
+BattleSound.bgm.push(this.battle.scene.bgm);
 },
 $:function(sel){
 return this.$el.find(sel);
